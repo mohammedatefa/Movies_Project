@@ -1,0 +1,18 @@
+.linkactive{
+  color: #24abef;
+  font-weight: bold;
+  transition: all 0.5s ease;
+}
+
+.nav-link{
+  font-size: 18px;
+}
+.logout:hover{
+  cursor: pointer;
+  color: #24abef;
+  font-weight: bold;
+  transition: all 0.5s ease;
+}
+nav{
+  background-color: #131722;
+}

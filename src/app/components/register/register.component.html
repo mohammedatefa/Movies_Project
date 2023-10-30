@@ -1,0 +1,52 @@
+
+<div class="container-md register mb-2">
+  <div class="row">
+    <div class="col-md-5">
+      <img src="../../../assets/images/signup-2.jpg" class="w-100 h-100" alt="sign up image">
+    </div>
+    <div class="col-md-7">
+      <h3 class="text-center">Sign-in</h3>
+      <form [formGroup]="regitretionform">
+        <div class="form-floating mb-2">
+          <input formControlName="first_name" type="text" class="form-control bg-transparent first" id="floatingInput" placeholder="first-name" >
+          <label for="floatingInput" class="bg-transparent mb-1">First Name</label>
+        </div>
+        <div *ngIf="regitretionform.get('first_name')?.errors && regitretionform.get('first_name')?.touched">
+          <p *ngIf="regitretionform.get('first_name')?.hasError('required')" class="text-danger">*Please first name is required</p>
+          <p *ngIf="regitretionform.get('first_name')?.hasError('minlength')" class="text-danger">*Please first name must be more than 3 letters</p>
+          <p *ngIf="regitretionform.get('first_name')?.hasError('maxlength')" class="text-danger">*Please name must be less than 10 letters</p>
+        </div>
+
+        <div class="form-floating mb-2">
+          <input formControlName="last_name" type="text" class="form-control bg-transparent text-white" id="floatingInput" placeholder="last-name" >
+          <label for="floatingInput" class="bg-transparent mb-1">Last Name</label>
+        </div>
+        <div *ngIf="regitretionform.get('last_name')?.errors && regitretionform.get('last_name')?.touched">
+          <p *ngIf="regitretionform.get('last_name')?.hasError('required')" class="text-danger">*Please last name is required</p>
+          <p *ngIf="regitretionform.get('last_name')?.hasError('minlength')" class="text-danger">*Please name must be more than 3 letters.</p>
+          <p *ngIf="regitretionform.get('last_name')?.hasError('maxlength')" class="text-danger">*Please name must be less than 10 letters</p>
+        </div>
+
+        <div class="form-floating mb-2">
+          <input formControlName="email" type="email" class="form-control bg-transparent text-white" id="floatingInput" placeholder="name@example.com" >
+          <label for="floatingInput" class="bg-transparent mb-1">E-mail</label>
+        </div>
+        <div *ngIf="regitretionform.get('email')?.errors && regitretionform.get('email')?.touched">
+          <p *ngIf="regitretionform.get('email')?.hasError('required')" class="text-danger">*Please E-mail is required</p>
+          <p *ngIf="regitretionform.get('email')?.hasError('pattern')" class="text-danger">*Please enter a valid E-mail. it must contain @ </p>
+        </div>
+
+        <div class="form-floating mb-2">
+          <input formControlName="password" type="password" class="form-control bg-transparent text-white" id="floatingInput" placeholder="name@example.com" >
+          <label for="floatingInput" class="bg-transparent mb-1">Password</label>
+        </div>
+        <div *ngIf="regitretionform.get('password')?.errors && regitretionform.get('password')?.touched">
+          <p *ngIf="regitretionform.get('password')?.hasError('required')" class="text-danger">*Please Password is required</p>
+          <p *ngIf="regitretionform.get('password')?.hasError('pattern')" class="text-danger">*Passwords must have at least 8 characters, including one letter and one digit.</p>
+        </div>
+       <button type="button" class="btn btn-primary" [disabled]="regitretionform.invalid">Register</button>
+      </form>
+
+    </div>
+  </div>
+</div>
