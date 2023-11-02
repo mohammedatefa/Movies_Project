@@ -12,9 +12,13 @@ import { MoviesComponent } from './components/movies/movies.component';
 import { PeopleComponent } from './components/people/people.component';
 import { TvComponent } from './components/tv/tv.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
+import { MoviedetailesComponent } from './components/moviedetailes/moviedetailes.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { RouterLinkActive } from '@angular/router';
 import{HttpClientModule}from'@angular/common/http';
+import { AuthinticationService } from './authintication.service';
+import { TvdetailesComponent } from './tvdetailes/tvdetailes.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +30,8 @@ import{HttpClientModule}from'@angular/common/http';
     MoviesComponent,
     PeopleComponent,
     TvComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    TvdetailesComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +41,7 @@ import{HttpClientModule}from'@angular/common/http';
     ReactiveFormsModule
 
   ],
-  providers: [],
+  providers: [AuthinticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

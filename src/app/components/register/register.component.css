@@ -1,21 +1,24 @@
 .register{
-  height: 500px;
+  height: 555px;
   overflow: hidden;
 }
-.form-floating:focus-within {
+.register-head{
+  width: 100px;
+  margin: auto;
+  border-bottom: 3px solid #24baef;
+  border-bottom-right-radius: 8px;
+}
+.form-input:focus-within {
   z-index: 2;
 }
 
-#floatingInput{
-  background-color: #131722;
-}
-.form-floating .first {
+.form-input .first {
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
   color: white;
 }
-.form-floating input[type="password"] {
+.form-input input[type="password"] {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;

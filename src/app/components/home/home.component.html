@@ -1,1 +1,50 @@
-<p>home works!</p>
+<div class="container-md">
+  <div class="row py-5">
+    <div class="col-md-4 d-flex align-items-center">
+      <div>
+        <div class="brder w-25 mb-3"></div>
+        <h2>Trending <br> Movies <br> To Watch Right Now</h2>
+          <p class="txt">Most Watched Movies By Day </p>
+        <div class="brder w-100"></div>
+      </div>
+    </div>
+    <div *ngFor="let item of movies" class="col-md-2">
+      <a [routerLink]="['/movie',item.id]" routerLinkActive="router-link-active"  class="movie">
+        <img [src]="Imageprefix+item.poster_path" alt="" class="w-100">
+        <h3 class="h6 mb-3 mt-1">{{item.title}}</h3>
+      </a>
+    </div>
+  </div>
+  <div class="row py-5">
+    <div class="col-md-4 d-flex align-items-center">
+      <div>
+        <div class="brder w-25 mb-3"></div>
+        <h2>Trending <br> tv <br> To Watch Right Now</h2>
+          <p class="txt">Most Watched tv series By Day </p>
+        <div class="brder w-100"></div>
+      </div>
+    </div>
+    <div *ngFor="let item of tv" class="col-md-2">
+      <a class="movie">
+        <img [src]="Imageprefix+item.poster_path" alt="" class="w-100">
+        <h3 class="h6 mb-3 mt-1">{{item.name}}</h3>
+      </a>
+    </div>
+  </div>
+  <div class="row py-5">
+    <div class="col-md-4 d-flex align-items-center">
+      <div>
+        <div class="brder w-25 mb-3"></div>
+        <h2>Trending <br> Persons <br> To Watch Right Now</h2>
+          <p class="txt">Most Persons Movies By Day </p>
+        <div class="brder w-100"></div>
+      </div>
+    </div>
+    <div *ngFor="let item of persons" class="col-md-2">
+      <div class="movie">
+        <img [src]="Imageprefix+item.profile_path" alt="" class="w-100">
+        <h3 class="h6 mb-3 mt-1">{{item.name}}</h3>
+      </div>
+    </div>
+  </div>
+</div>

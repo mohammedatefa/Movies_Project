@@ -1,0 +1,21 @@
+<div class="container-md">
+  <div class="row py-5" style="margin: auto;">
+    <div class="col-md-4">
+      <img [src]="imageprefix+moveidetailes.poster_path" class="w-100 h-100" alt="">
+    </div>
+    <div class="col-md-8">
+      <h3 class="fw-bold">{{moveidetailes.original_title}}</h3>
+      <h5> Release_Date : {{moveidetailes.release_date}}</h5>
+      <h6>
+        Revenue : ${{moveidetailes.revenue}}
+      </h6>
+      <p class="description">
+        Description : <br>{{moveidetailes.overview}}
+      </p>
+      <div>
+        <span class="rounded-1 p-2 bg-primary mx-2">Vote_Average: {{moveidetailes.vote_average}}</span>
+        <span class="rounded-1 p-2 bg-primary mx-2">Vote_Count: {{moveidetailes.vote_count}}</span>
+      </div>
+    </div>
+  </div>
+</div>

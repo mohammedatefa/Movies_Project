@@ -1,0 +1,36 @@
+.brder{
+  height: 1px;
+  background-color: #a8a8a83d;
+}
+.txt{
+  color: #eee;
+}
+a,a:hover{
+  color:#fff;
+  text-decoration: none;
+}
+.row {
+  display: flex;
+}
+
+.row > * {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.row > *:hover img {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+  margin-bottom: 10px;
+}
