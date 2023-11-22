@@ -6,3 +6,18 @@
   border-bottom-right-radius: 8px;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply Animation */
+.login {
+  animation: fadeIn 0.8s ease-out;
+}

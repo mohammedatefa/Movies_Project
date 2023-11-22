@@ -15,11 +15,11 @@ export class RegisterComponent {
   isloading:boolean=false;
   errormessege:string="";
   regitretionform: FormGroup = new FormGroup({
-    first_name: new FormControl(null, [Validators.minLength(3), Validators.maxLength(10), Validators.required]),
-    last_name: new FormControl(null, [Validators.minLength(3), Validators.maxLength(10), Validators.required]),
+    FirstName: new FormControl(null, [Validators.minLength(3), Validators.maxLength(10), Validators.required]),
+    LastName: new FormControl(null, [Validators.minLength(3), Validators.maxLength(10), Validators.required]),
     // age: new FormControl(null, [Validators.required, Validators.min(15), Validators.max(80)]),
-    email: new FormControl(null, [Validators.email, Validators.required, Validators.pattern(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)]),
-    password: new FormControl(null, [Validators.required, Validators.pattern(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/)])
+    Email: new FormControl(null, [Validators.email, Validators.required, Validators.pattern(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)]),
+    Password: new FormControl(null, [Validators.required, Validators.pattern(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/)])
   });
 
 onregister(dateform:FormGroup){
@@ -42,5 +42,8 @@ onregister(dateform:FormGroup){
 
   }
 
+}
+goto(){
+  this._router.navigate(['/login'])
 }
 }

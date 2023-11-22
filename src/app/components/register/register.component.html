@@ -8,53 +8,55 @@
       <h3 class="text-center pt-3 fw-bold register-head">Sign-in</h3>
       <form [formGroup]="regitretionform" (ngSubmit)="onregister(regitretionform)">
         <div class="form-input mb-2">
-          <label for="first_name" class="bg-transparent mb-1">First Name</label>
-          <input formControlName="first_name" type="text" class="form-control bg-transparent first" id="first_name" placeholder="first-name" >
+          <label for="FirstName" class="bg-transparent mb-1">First Name</label>
+          <input formControlName="FirstName" type="text" class="form-control bg-transparent first" id="FirstName" placeholder="first-name" >
 
         </div>
-        <div class="mt-0" *ngIf="regitretionform.get('first_name')?.errors && regitretionform.get('first_name')?.touched">
-          <p *ngIf="regitretionform.get('first_name')?.hasError('required')" class="text-danger">*Please first name is required</p>
-          <p *ngIf="regitretionform.get('first_name')?.hasError('minlength')" class="text-danger">*Please first name must be more than 3 letters</p>
-          <p *ngIf="regitretionform.get('first_name')?.hasError('maxlength')" class="text-danger">*Please name must be less than 10 letters</p>
-        </div>
-
-        <div class="form-input mb-2">
-          <label for="last_name" class="bg-transparent mb-1">Last Name</label>
-          <input formControlName="last_name" type="text" class="form-control bg-transparent text-white" id="last_name" placeholder="last-name" >
-
-        </div>
-        <div class="mt-0" *ngIf="regitretionform.get('last_name')?.errors && regitretionform.get('last_name')?.touched">
-          <p *ngIf="regitretionform.get('last_name')?.hasError('required')" class="text-danger">*Please last name is required</p>
-          <p *ngIf="regitretionform.get('last_name')?.hasError('minlength')" class="text-danger">*Please name must be more than 3 letters.</p>
-          <p *ngIf="regitretionform.get('last_name')?.hasError('maxlength')" class="text-danger">*Please name must be less than 10 letters</p>
+        <div class="mt-0" *ngIf="regitretionform.get('FirstName')?.errors && regitretionform.get('FirstName')?.touched">
+          <p *ngIf="regitretionform.get('FirstName')?.hasError('required')" class="text-danger">*Please first name is required</p>
+          <p *ngIf="regitretionform.get('FirstName')?.hasError('minlength')" class="text-danger">*Please first name must be more than 3 letters</p>
+          <p *ngIf="regitretionform.get('FirstName')?.hasError('maxlength')" class="text-danger">*Please name must be less than 10 letters</p>
         </div>
 
         <div class="form-input mb-2">
-          <label for="email" class="bg-transparent mb-1">E-mail</label>
-          <input formControlName="email" type="email" class="form-control bg-transparent text-white" id="email" placeholder="name@example.com" >
+          <label for="LastName" class="bg-transparent mb-1">Last Name</label>
+          <input formControlName="LastName" type="text" class="form-control bg-transparent text-white" id="LastName" placeholder="last-name" >
 
         </div>
-        <div class="mt-0" *ngIf="regitretionform.get('email')?.errors && regitretionform.get('email')?.touched">
-          <p *ngIf="regitretionform.get('email')?.hasError('required')" class="text-danger">*Please E-mail is required</p>
-          <p *ngIf="regitretionform.get('email')?.hasError('pattern')" class="text-danger">*Please enter a valid E-mail. it must contain @ </p>
+        <div class="mt-0" *ngIf="regitretionform.get('LastName')?.errors && regitretionform.get('LastName')?.touched">
+          <p *ngIf="regitretionform.get('LastName')?.hasError('required')" class="text-danger">*Please last name is required</p>
+          <p *ngIf="regitretionform.get('LastName')?.hasError('minlength')" class="text-danger">*Please name must be more than 3 letters.</p>
+          <p *ngIf="regitretionform.get('LastName')?.hasError('maxlength')" class="text-danger">*Please name must be less than 10 letters</p>
         </div>
 
         <div class="form-input mb-2">
-          <label for="password" class="bg-transparent mb-1" >Password</label>
-          <input formControlName="password" type="password" class="form-control bg-transparent text-white" id="password" placeholder="name@example.com" >
+          <label for="Email" class="bg-transparent mb-1">E-mail</label>
+          <input formControlName="Email" type="Email" class="form-control bg-transparent text-white" id="Email" placeholder="name@example.com" >
 
         </div>
-        <div class="mt-0" *ngIf="regitretionform.get('password')?.errors && regitretionform.get('password')?.touched">
-          <p *ngIf="regitretionform.get('password')?.hasError('required')" class="text-danger">*Please Password is required</p>
-          <p *ngIf="regitretionform.get('password')?.hasError('pattern')" class="text-danger">*Passwords must have at least 8 characters, including one letter and one digit.</p>
+        <div class="mt-0" *ngIf="regitretionform.get('Email')?.errors && regitretionform.get('Email')?.touched">
+          <p *ngIf="regitretionform.get('Email')?.hasError('required')" class="text-danger">*Please E-mail is required</p>
+          <p *ngIf="regitretionform.get('Email')?.hasError('pattern')" class="text-danger">*Please enter a valid E-mail. it must contain @ </p>
         </div>
-       <button type="submit" class="btn btn-primary" [disabled]="regitretionform.invalid">
+
+        <div class="form-input mb-2">
+          <label for="Password" class="bg-transparent mb-1" >Password</label>
+          <input formControlName="Password" type="Password" class="form-control bg-transparent text-white" id="Password" placeholder="name@example.com" >
+
+        </div>
+        <div class="mt-0" *ngIf="regitretionform.get('Password')?.errors && regitretionform.get('Password')?.touched">
+          <p *ngIf="regitretionform.get('Password')?.hasError('required')" class="text-danger">*Please Password is required</p>
+          <p *ngIf="regitretionform.get('Password')?.hasError('pattern')" class="text-danger">*Passwords must have at least 8 characters, including one letter and one digit.</p>
+        </div>
+       <button type="submit" class="btn btn-primary w-100" [disabled]="regitretionform.invalid">
         <span *ngIf="isloading"><i class="fas fa-spinner fa-spin"></i></span>
         <span *ngIf="!isloading">Register</span>
        </button>
       </form>
-      <div *ngIf="errormessege" class="alert alert-primary mt-2">
-          {{errormessege}} you can login if you have already account <a  routerLink="/login" type="button" class="btn btn-danger mx-2">Login</a>
+      <button class="btn btn-danger w-100 mt-2" (click)="goto()">Log-In</button>
+      <div *ngIf="errormessege" class="alert alert-danger mt-2">
+          {{errormessege}} you can login if you have already account
+          <!-- <a  routerLink="/login" type="button" class="btn btn-danger mx-2">Login</a> -->
       </div>
     </div>
   </div>

@@ -23,10 +23,10 @@ export class AuthinticationService {
   }
 
   signin(formdata:object):Observable<any>{
-    return this._httpclient.post(`http://localhost:46614/api/user`,formdata)
+    return this._httpclient.post(`https://localhost:44344/api/user/SignIn`,formdata)
   }
   login(formdata:object):Observable<any>{
-    return this._httpclient.post(`http://localhost:46614/api/user/login`,formdata)
+    return this._httpclient.post(`https://localhost:44344/api/user/login`,formdata)
   }
 
   signout(){

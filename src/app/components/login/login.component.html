@@ -5,22 +5,22 @@
         <h3 class="text-center login-head mb-3">LogIn</h3>
         <form [formGroup]="loginform" (ngSubmit)="onlogin(loginform)">
           <div class="form-input mb-2">
-            <label for="email" class="bg-transparent mb-1">E-mail</label>
-            <input formControlName="email" type="email" class="form-control bg-transparent text-white" id="email" placeholder="name@example.com" >
+            <label for="Email" class="bg-transparent mb-1">E-mail</label>
+            <input formControlName="Email" type="Email" class="form-control bg-transparent text-white" id="Email" placeholder="name@example.com" >
           </div>
-          <div class="mt-0" *ngIf="loginform.get('email')?.errors && loginform.get('email')?.touched">
-            <p *ngIf="loginform.get('email')?.hasError('required')" class="text-danger">*Please E-mail is required</p>
-            <p *ngIf="loginform.get('email')?.hasError('pattern')" class="text-danger">*Please enter a valid E-mail. </p>
+          <div class="mt-0" *ngIf="loginform.get('Email')?.errors && loginform.get('Email')?.touched">
+            <p *ngIf="loginform.get('Email')?.hasError('required')" class="text-danger">*Please E-mail is required</p>
+            <p *ngIf="loginform.get('Email')?.hasError('pattern')" class="text-danger">*Please enter a valid E-mail. </p>
           </div>
 
           <div class="form-input mb-2">
-            <label for="password" class="bg-transparent mb-1" >Password</label>
-            <input formControlName="password" type="password" class="form-control bg-transparent text-white" id="password" placeholder="name@example.com" >
+            <label for="Password" class="bg-transparent mb-1" >Password</label>
+            <input formControlName="Password" type="Password" class="form-control bg-transparent text-white" id="Password" placeholder="name@example.com" >
 
           </div>
-          <div class="mt-0" *ngIf="loginform.get('password')?.errors && loginform.get('password')?.touched">
-            <p *ngIf="loginform.get('password')?.hasError('required')" class="text-danger">*Please Password is required</p>
-            <p *ngIf="loginform.get('password')?.hasError('pattern')" class="text-danger">*Passwords must have at least 8 characters, including one letter and one digit.</p>
+          <div class="mt-0" *ngIf="loginform.get('Password')?.errors && loginform.get('Password')?.touched">
+            <p *ngIf="loginform.get('Password')?.hasError('required')" class="text-danger">*Please Password is required</p>
+            <p *ngIf="loginform.get('Password')?.hasError('pattern')" class="text-danger">*Passwords must have at least 8 characters, including one letter and one digit.</p>
           </div>
         <div class="d-flex">
           <button type="submit" class="btn btn-danger w-100 mt-2" [disabled]="loginform.invalid">
@@ -30,7 +30,8 @@
         </div>
         </form>
         <p *ngIf="errormessege" class="alert alert-danger mt-3">
-            <span class="text-danger">* </span>{{errormessege}} you can go to registrition form
+            <span class="text-danger">* </span>{{errormessege}} you can go to Registrtion form
+             <a  routerLink="/register" type="button" class="btn btn-primary mx-2">Register</a>
         </p>
       </div>
     </div>
